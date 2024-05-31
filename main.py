@@ -20,7 +20,8 @@ def checkout_menu():
     print("\nCheckout/Return Menu")
     print("1. Checkout Book")
     print("2. Return Book")
-    print("3. Back to Main Menu")
+    print("3. List Checked Out Books")
+    print("4. Back to Main Menu")
     choice = input("Enter your choice: ")
     return choice
 
@@ -140,7 +141,7 @@ def main():
                         print("No users found matching the search term.")
                 elif user_choice == '4':
                     user_id = input("Enter User ID of the user to update: ")
-                    user_to_update = storage.get_user_by_id(user_id)
+                    user_to_update = storage.get_user_by_id(user_id)  # Corrected function name
                     if user_to_update:
                         name = input(f"Enter new name (current: {user_to_update.name}): ")
                         user_to_update.name = name
@@ -166,7 +167,7 @@ def main():
                 if checkout_choice == '1':
                     user_id = input("Enter user ID: ")
                     book_title = input("Enter title of the book to checkout: ")
-                    search_results = storage.search_books(book_title)
+                    search_results = models.search_books(book_title)
                     if search_results:
                         print("\nDo you mean one of these books?")
                         for i, b in enumerate(search_results):
@@ -207,6 +208,13 @@ def main():
                     else:
                         print("Book or checkout record not found.")
                 elif checkout_choice == '3':
+                    checked_out_books = storage.get_checked_out_books()
+                    if checked_out_books:
+                        for b in checked_out_books:
+                            print(b)
+                    else:
+                        print("No books are currently checked out.")
+                elif checkout_choice == '4':
                     break
                 else:
                     print("Invalid choice, please try again.")

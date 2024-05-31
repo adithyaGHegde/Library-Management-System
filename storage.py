@@ -87,6 +87,14 @@ def delete_book_by_isbn(isbn):
             return True
     return False
 
+def get_user_by_id(user_id):
+    """Finds and returns a user by their user ID."""
+    for user in users:
+        if user.user_id == user_id:
+            return user
+    return None
+
+
 def delete_user_by_id(user_id):
     """Deletes a user from the list based on their user ID."""
     for i, user in enumerate(users):
@@ -101,3 +109,11 @@ def update_book(book):
         if b.isbn == book.isbn:
             books[i] = book
             break
+
+def get_checked_out_books():
+    """Returns a list of books that are currently checked out."""
+    checked_out_books = []
+    for book in books:
+        if not book.is_available:
+            checked_out_books.append(book)
+    return checked_out_books
