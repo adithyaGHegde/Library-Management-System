@@ -1,0 +1,66 @@
+{
+    "books": [
+        {
+            "title": "The Great Gatsby",
+            "author": "F. Scott Fitzgerald",
+            "isbn": "9780333791035"
+        },
+        {
+            "title": "To Kill a Mockingbird",
+            "author": "Harper Lee",
+            "isbn": "9780061120084"
+        },
+        {
+            "title": "1984",
+            "author": "George Orwell",
+            "isbn": "9780451524935"
+        },
+        {
+            "title": "Pride and Prejudice",
+            "author": "Jane Austen",
+            "isbn": "9780141439518"
+        },
+        {
+            "title": "The Catcher in the Rye",
+            "author": "J.D. Salinger",
+            "isbn": "9780316769488"
+        },
+        {
+            "title": "The Hobbit",
+            "author": "J.R.R. Tolkien",
+            "isbn": "9780618053267"
+        }
+    ],
+    "users": [
+        {
+            "name": "Adithya Hegde",
+            "user_id": "163531052024"
+        },
+        {
+            "name": "Emily Carter",
+            "user_id": "1234567890"
+        },
+        {
+            "name": "William Johnson",
+            "user_id": "9876543210"
+        },
+        {
+            "name": "Sophia Rodriguez",
+            "user_id": "1111111111"
+        }
+    ],
+    "checkouts": [
+        {
+            "user_id": "163531052024",
+            "book_isbn": "9780333791035"
+        },
+        {
+            "user_id": "1234567890",
+            "book_isbn": "9780061120084"
+        },
+        {
+            "user_id": "9876543210",
+            "book_isbn": "9780451524935"
+        }
+    ]
+}
